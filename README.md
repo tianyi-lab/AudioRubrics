@@ -58,7 +58,7 @@ Training requires flash-attention-2 and DeepSpeed (ZeRO-3 config in `src/local_s
 
 ## 📥 Download the Data
 
-Training data is drawn from [AVQA](https://mn.cs.tsinghua.edu.cn/avqa/): audio is extracted from the videos and audio–text pairs are constructed by replacing "video" with "audio" in the questions, yielding 40k training samples. Two files are needed (see `data/avqa/README.md` for the exact formats):
+Training data is drawn from [AVQA](https://huggingface.co/datasets/gijs/avqa-processed): audio is extracted from the videos and audio–text pairs are constructed by replacing "video" with "audio" in the questions, yielding 40k training samples. Two files are needed (see `data/avqa/README.md` for the exact formats):
 
 ```
 data/avqa/train_with_rubrics.json    # training samples (question / answer / audio path)
