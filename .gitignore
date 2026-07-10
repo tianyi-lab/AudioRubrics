@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+train_logs/
+wandb/
+swanlab/
+*.safetensors
+*.ckpt
+.env
+*.env
