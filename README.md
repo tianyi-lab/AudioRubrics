@@ -69,7 +69,7 @@ The full static-rubric annotation set will be released on Hugging Face. The rubr
 
 ## 🎯 Train AudioRubrics
 
-Train with evolving rubrics + overthinking penalty (defaults γ = 0.5, δ = 0.15, L = 256):
+Set your judge API key, point the script at the base model and the rubric file, then launch:
 
 ```bash
 export GEMINI_API_KEY=...           # judge / rubric-generator API key (or GEMINI_API_KEYS=key1,key2)
@@ -107,10 +107,6 @@ python scripts/eval/evaluation.py --input <pred.jsonl>
 ```
 
 `scripts/eval/eval_ckpts_3benchmarks.sh` automates this loop over checkpoints for all three benchmarks.
-
-| Method | MMAU Test-mini | MMAR | MMSU |
-|---|:---:|:---:|:---:|
-| **AudioRubrics** | **78.00** | **65.80** | **65.86** |
 
 ## 📖 Citation
 
