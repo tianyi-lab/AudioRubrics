@@ -69,13 +69,7 @@ The full static-rubric annotation set will be released on Hugging Face. The rubr
 
 ## 🎯 Train AUDIO-EVO
 
-GRPO baseline (outcome reward only):
-
-```bash
-bash scripts/run_avqa_grpo_baseline.sh
-```
-
-AUDIO-EVO (evolving rubrics + overthinking penalty; defaults γ = 0.5, δ = 0.15, L = 256):
+Train with evolving rubrics + overthinking penalty (defaults γ = 0.5, δ = 0.15, L = 256):
 
 ```bash
 export GEMINI_API_KEY=...           # judge / rubric-generator API key (or GEMINI_API_KEYS=key1,key2)
