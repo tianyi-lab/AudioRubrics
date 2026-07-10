@@ -33,9 +33,9 @@
 
 ## 🔥 Overview
 
-**AUDIO-EVO** is a reinforcement learning framework that supervises audio reasoning with **self-evolving, audio-grounded rubric rewards**.
+**AudioRubrics** is a reinforcement learning framework that supervises audio reasoning with **self-evolving, audio-grounded rubric rewards**.
 
-Outcome-based rewards supervise only the final answer and let the model reach it without genuinely attending to the audio, whereas existing process-based rewards rely on coarse, hand-crafted, and fixed criteria that neither adapt to each question nor stay grounded in the acoustic evidence. AUDIO-EVO synthesizes per-sample rubrics **from the raw waveform** and, conditioned on the model's own rollouts, **regenerates and reweights criteria each group** to keep supplying signal exactly where an outcome-only reward is flat: a judge evaluates every rubric on the rollout group, a variance filter prunes non-discriminative criteria, and new criteria (with positive/negative polarity) are distilled from the model's current failure modes. The rubric score is combined with the accuracy reward and a linear **overthinking penalty** for GRPO optimization:
+Outcome-based rewards supervise only the final answer and let the model reach it without genuinely attending to the audio, whereas existing process-based rewards rely on coarse, hand-crafted, and fixed criteria that neither adapt to each question nor stay grounded in the acoustic evidence. AudioRubrics synthesizes per-sample rubrics **from the raw waveform** and, conditioned on the model's own rollouts, **regenerates and reweights criteria each group** to keep supplying signal exactly where an outcome-only reward is flat: a judge evaluates every rubric on the rollout group, a variance filter prunes non-discriminative criteria, and new criteria (with positive/negative polarity) are distilled from the model's current failure modes. The rubric score is combined with the accuracy reward and a linear **overthinking penalty** for GRPO optimization:
 
 $$R = R_{\text{outcome}} + \gamma \cdot R_{\text{rubric}} + \delta \cdot R_{\text{overthinking}}$$
 
@@ -44,13 +44,13 @@ $$R = R_{\text{outcome}} + \gamma \cdot R_{\text{rubric}} + \delta \cdot R_{\tex
 - 🎧 **Audio-grounded rubrics**: every criterion is generated from the raw waveform rather than a transcript, so the reward verifies that the reasoning is anchored in acoustic evidence actually present in the clip.
 - 🔄 **Self-evolving supervision**: rubrics are regenerated and reweighted from the model's own rollouts each group, so the evaluation standard keeps rising as the policy improves instead of saturating like a fixed criterion.
 - ⚖️ **Stable reasoning length**: the overthinking penalty counterbalances the rubric reward, converging to a stable reasoning length that avoids both degenerate collapse (outcome-only GRPO) and runaway verbosity (rubric-only).
-- 🏆 **State-of-the-art results**: with Qwen2.5-Omni-7B, AUDIO-EVO reaches **78.00** on MMAU Test-mini (exceeding Gemini-3.1-Pro), **65.80** on MMAR, and **65.86** on MMSU, surpassing the strongest proprietary, open-source, and training-based baselines on every benchmark.
+- 🏆 **State-of-the-art results**: with Qwen2.5-Omni-7B, AudioRubrics reaches **78.00** on MMAU Test-mini (exceeding Gemini-3.1-Pro), **65.80** on MMAR, and **65.86** on MMSU, surpassing the strongest proprietary, open-source, and training-based baselines on every benchmark.
 
 ## 🖥️ Installation
 
 ```bash
-conda create -n audioevo python=3.11 -y
-conda activate audioevo
+conda create -n audiorubrics python=3.11 -y
+conda activate audiorubrics
 bash setup.sh            # or: pip install -r requirements.txt
 ```
 
@@ -67,7 +67,7 @@ rubrics_avqa_train.jsonl             # 5 weighted static rubrics per sample, gen
 
 The full static-rubric annotation set will be released on Hugging Face. The rubric-generator / judge prompt is in `data/evolving_rubric_system_prompt.md`, and `data/sample_logs/` contains a sample of the per-step rubric-evolution logs (which rubrics were generated, kept, judged, and reweighted at each step).
 
-## 🎯 Train AUDIO-EVO
+## 🎯 Train AudioRubrics
 
 Train with evolving rubrics + overthinking penalty (defaults γ = 0.5, δ = 0.15, L = 256):
 
@@ -96,7 +96,7 @@ python scripts/merge_thinker_to_full.py --ckpt_dir <checkpoint> --orig_dir <base
 
 ## 📊 Evaluation
 
-AUDIO-EVO is evaluated on [MMAU Test-mini](https://sakshi113.github.io/mmau_homepage/), [MMAR](https://github.com/ddlBoJack/MMAR), and [MMSU](https://huggingface.co/datasets/ddwang2000/MMSU). Serve the merged model with [vLLM](https://github.com/vllm-project/vllm), generate answers, then score:
+AudioRubrics is evaluated on [MMAU Test-mini](https://sakshi113.github.io/mmau_homepage/), [MMAR](https://github.com/ddlBoJack/MMAR), and [MMSU](https://huggingface.co/datasets/ddwang2000/MMSU). Serve the merged model with [vLLM](https://github.com/vllm-project/vllm), generate answers, then score:
 
 ```bash
 vllm serve <merged_model> --served-model-name omni --trust-remote-code \
@@ -110,16 +110,14 @@ python scripts/eval/evaluation.py --input <pred.jsonl>
 
 | Method | MMAU Test-mini | MMAR | MMSU |
 |---|:---:|:---:|:---:|
-| Qwen2.5-Omni-7B (base) | 65.20 | 56.70 | 42.50 |
-| GRPO (outcome reward) | 75.20 | 62.20 | 63.14 |
-| **AUDIO-EVO** | **78.00** | **65.80** | **65.86** |
+| **AudioRubrics** | **78.00** | **65.80** | **65.86** |
 
 ## 📖 Citation
 
 If you find this work useful, please cite:
 
 ```bibtex
-@article{yu2026audioevo,
+@article{yu2026audiorubrics,
   title={Reinforcement Learning with Evolving Rubrics for Audio Reasoning},
   author={Yu, Fangxu and Feng, Tao and Min, Dehai and Lin, Zinan and Yu, Philip S. and Liu, Ge and Zhou, Tianyi and Xu, Weijia and Liu, Xiaodong and Gao, Jianfeng},
   journal={arXiv preprint},
