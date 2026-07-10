@@ -1,5 +1,5 @@
 <h1 align="center">
-  Reinforcement Learning with Evolving Rubrics for Audio Reasoning
+  Reinforcement Learning with Evolving Rubrics as Rewards for Audio Reasoning
 </h1>
 
 <p align="center">
