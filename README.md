@@ -44,7 +44,6 @@ $$R = R_{\text{outcome}} + \gamma \cdot R_{\text{rubric}} + \delta \cdot R_{\tex
 - 🎧 **Audio-grounded rubrics**: every criterion is generated from the raw waveform rather than a transcript, so the reward verifies that the reasoning is anchored in acoustic evidence actually present in the clip.
 - 🔄 **Self-evolving supervision**: rubrics are regenerated and reweighted from the model's own rollouts each group, so the evaluation standard keeps rising as the policy improves instead of saturating like a fixed criterion.
 - ⚖️ **Stable reasoning length**: the overthinking penalty counterbalances the rubric reward, converging to a stable reasoning length that avoids both degenerate collapse (outcome-only GRPO) and runaway verbosity (rubric-only).
-- 🏆 **State-of-the-art results**: with Qwen2.5-Omni-7B, AudioRubrics reaches **78.00** on MMAU Test-mini (exceeding Gemini-3.1-Pro), **65.80** on MMAR, and **65.86** on MMSU, surpassing the strongest proprietary, open-source, and training-based baselines on every benchmark.
 
 ## 🖥️ Installation
 
