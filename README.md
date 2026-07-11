@@ -5,7 +5,7 @@
 <p align="center">
   📄 <a href="https://github.com/Yu-Fangxu/AudioRubrics"><strong>Paper</strong></a> |
   🤗 <a href="https://huggingface.co/Yu-Fangxu"><strong>Model</strong></a> |
-  🤗 <a href="https://huggingface.co/Yu-Fangxu"><strong>Rubric Dataset</strong></a>
+  🤗 <a href="https://huggingface.co/datasets/ParadiseYu/AVQA-Audio-Rubrics"><strong>Rubric Dataset</strong></a>
 </p>
 
 <p align="center">
@@ -64,7 +64,7 @@ data/avqa/train_with_rubrics.json    # training samples (question / answer / aud
 rubrics_avqa_train.jsonl             # 5 weighted static rubrics per sample, generated from the raw waveform
 ```
 
-The full static-rubric annotation set will be released on Hugging Face. The rubric-generator / judge prompt is in `data/evolving_rubric_system_prompt.md`, and `data/sample_logs/` contains a sample of the per-step rubric-evolution logs (which rubrics were generated, kept, judged, and reweighted at each step).
+The full static-rubric annotation set (40,380 samples) is available at [ParadiseYu/AVQA-Audio-Rubrics](https://huggingface.co/datasets/ParadiseYu/AVQA-Audio-Rubrics). The rubric-generator / judge prompt is in `data/evolving_rubric_system_prompt.md`, and `data/sample_logs/` contains a sample of the per-step rubric-evolution logs (which rubrics were generated, kept, judged, and reweighted at each step).
 
 ## 🎯 Train AudioRubrics
 
