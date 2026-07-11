@@ -4,7 +4,7 @@
 
 <p align="center">
   📄 <a href="https://github.com/Yu-Fangxu/AudioRubrics"><strong>Paper</strong></a> |
-  🤗 <a href="https://huggingface.co/Yu-Fangxu"><strong>Model</strong></a> |
+  🤗 <a href="https://huggingface.co/ParadiseYu/AudioRubrics"><strong>Model</strong></a> |
   🤗 <a href="https://huggingface.co/datasets/ParadiseYu/AVQA-Audio-Rubrics"><strong>Rubric Dataset</strong></a>
 </p>
 
