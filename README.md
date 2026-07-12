@@ -13,11 +13,12 @@
   <a href="https://ft2023.github.io/taofeng.github.io/">Tao Feng</a><sup>2</sup>,
   <a href="https://zhishanq.github.io/">Dehai Min</a><sup>3</sup>,
   <a href="https://zinanlin.me/">Zinan Lin</a><sup>4</sup>,
+  <a href="https://www.microsoft.com/en-us/research/people/xiaodl/">Xiaodong Liu</a><sup>4</sup>,
+  <a href="https://www.microsoft.com/en-us/research/people/weijiaxu/">Weijia Xu</a><sup>4</sup>
+  <br>
   <a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a><sup>3</sup>,
   <a href="https://siebelschool.illinois.edu/about/people/all-faculty/geliu">Ge Liu</a><sup>2</sup>,
   <a href="https://tianyizhou.github.io/">Tianyi Zhou</a><sup>5</sup>,
-  <a href="https://www.microsoft.com/en-us/research/people/weijiaxu/">Weijia Xu</a><sup>4</sup>,
-  <a href="https://www.microsoft.com/en-us/research/people/xiaodl/">Xiaodong Liu</a><sup>4</sup>,
   <a href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup>4</sup>
 </p>
 
@@ -114,7 +115,7 @@ If you find this work useful, please cite:
 ```bibtex
 @article{yu2026audiorubrics,
   title={Reinforcement Learning with Evolving Rubrics for Audio Reasoning},
-  author={Yu, Fangxu and Feng, Tao and Min, Dehai and Lin, Zinan and Yu, Philip S. and Liu, Ge and Zhou, Tianyi and Xu, Weijia and Liu, Xiaodong and Gao, Jianfeng},
+  author={Yu, Fangxu and Feng, Tao and Min, Dehai and Lin, Zinan and Liu, Xiaodong and Xu, Weijia and Yu, Philip S. and Liu, Ge and Zhou, Tianyi and Gao, Jianfeng},
   journal={arXiv preprint},
   year={2026}
 }
