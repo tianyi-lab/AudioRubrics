@@ -13,13 +13,11 @@
   <a href="https://ft2023.github.io/taofeng.github.io/">Tao Feng</a><sup>2</sup>,
   <a href="https://zhishanq.github.io/">Dehai Min</a><sup>3</sup>,
   <a href="https://zinanlin.me/">Zinan Lin</a><sup>4</sup>,
-  <a href="https://www.microsoft.com/en-us/research/people/xiaodl/">Xiaodong Liu</a><sup>4</sup>,
   <a href="https://www.microsoft.com/en-us/research/people/weijiaxu/">Weijia Xu</a><sup>4</sup>
   <br>
   <a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a><sup>3</sup>,
   <a href="https://siebelschool.illinois.edu/about/people/all-faculty/geliu">Ge Liu</a><sup>2</sup>,
   <a href="https://tianyizhou.github.io/">Tianyi Zhou</a><sup>5</sup>,
-  <a href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup>4</sup>
 </p>
 
 <p align="center">
