@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  📄 <a href="https://github.com/Yu-Fangxu/AudioRubrics"><strong>Paper</strong></a> |
+  📄 <a href="https://arxiv.org/abs/2608.02831"><strong>Paper</strong></a> |
   🤗 <a href="https://huggingface.co/umd-zhou-lab/AudioRubrics"><strong>Model</strong></a> |
   🤗 <a href="https://huggingface.co/datasets/umd-zhou-lab/AVQA-Audio-Rubrics"><strong>Rubric Dataset</strong></a>
 </p>
