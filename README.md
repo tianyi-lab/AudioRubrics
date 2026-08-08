@@ -111,10 +111,10 @@ python scripts/eval/evaluation.py --input <pred.jsonl>
 If you find this work useful, please cite:
 
 ```bibtex
-@article{yu2026audiorubrics,
-  title={Reinforcement Learning with Evolving Rubrics for Audio Reasoning},
-  author={Yu, Fangxu and Feng, Tao and Min, Dehai and Lin, Zinan and Liu, Xiaodong and Xu, Weijia and Yu, Philip S. and Liu, Ge and Zhou, Tianyi and Gao, Jianfeng},
-  journal={arXiv preprint},
+@article{yu2026reinforcement,
+  title={Reinforcement Learning with Evolving Rubrics as Rewards for Audio Reasoning},
+  author={Yu, Fangxu and Feng, Tao and Min, Dehai and Lin, Zinan and Xu, Weijia and Xu, Michael and Yu, Philip S and Liu, Ge and Zhou, Tianyi},
+  journal={arXiv preprint arXiv:2608.02831},
   year={2026}
 }
 ```
