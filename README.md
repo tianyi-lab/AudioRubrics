@@ -6,7 +6,7 @@
   📄 <a href="https://arxiv.org/abs/2608.02831"><strong>Paper</strong></a> |
   🤗 <a href="https://huggingface.co/umd-zhou-lab/AudioRubrics"><strong>Model</strong></a> |
   🤗 <a href="https://huggingface.co/datasets/umd-zhou-lab/AVQA-Audio-Rubrics"><strong>Rubric Dataset</strong></a> |
-  🤗 <a href="https://huggingface.co/spaces/hugging-apps/audio-rubrics"><strong>Demo</strong></a>
+  🤗 <a href="https://huggingface.co/spaces/umd-zhou-lab/audio-rubrics"><strong>Demo</strong></a>
 </p>
 
 <p align="center">
